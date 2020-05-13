@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StateActivity">
+
+    <ImageView
+        android:id="@+id/capitalImageView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/statenameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Oklahoma"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/capitalImageView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/gradeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="A+"
+        android:textColor="@color/a_color"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/capitalImageView"
+        app:layout_constraintEnd_toEndOf="@+id/capitalImageView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/informationCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/cardColor"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/capitalImageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/positiveNumberView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="3,125"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/positiveTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Positive Cases"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/positiveNumberView"
+                app:layout_constraintStart_toStartOf="@+id/positiveNumberView"
+                app:layout_constraintTop_toBottomOf="@+id/positiveNumberView" />
+
+            <TextView
+                android:id="@+id/negativeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:text="Negative Cases:"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/positiveTitle" />
+
+            <TextView
+                android:id="@+id/negativeNumberView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:text="7,500"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/positiveTitle" />
+
+            <TextView
+                android:id="@+id/hospitalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Currently Hospitalized:"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/negativeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/negativeTitle" />
+
+            <TextView
+                android:id="@+id/hospitalNumberView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="693"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/negativeNumberView"
+                app:layout_constraintTop_toBottomOf="@+id/negativeNumberView" />
+
+            <TextView
+                android:id="@+id/icuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Currently in ICU:"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/hospitalTitle"
+                app:layout_constraintTop_toBottomOf="@+id/hospitalTitle" />
+
+            <TextView
+                android:id="@+id/icuNumberView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="126"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/hospitalNumberView"
+                app:layout_constraintTop_toBottomOf="@+id/hospitalNumberView" />
+
+            <TextView
+                android:id="@+id/deathTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Death:"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/icuTitle"
+                app:layout_constraintTop_toBottomOf="@+id/icuTitle" />
+
+            <TextView
+                android:id="@+id/deathNumberView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="1,500"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/icuNumberView"
+                app:layout_constraintTop_toBottomOf="@+id/icuNumberView" />
+
+            <TextView
+                android:id="@+id/lastUpdatedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Lasted Modified:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

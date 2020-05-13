@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Data Preferences">
+
+        <ListPreference
+            app:defaultValue="Positive Cases"
+            app:entries="@array/data_entries"
+            app:entryValues="@array/data_values"
+            app:key="organize"
+            app:title="Organize States By"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Notifications">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="Push Notifications" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="About">
+
+        <Preference
+            app:title="Data Provider"
+            app:summary="The COVID Tracking Project"/>
+
+    <Preference
+        app:title="Open Source Libraries"
+        app:summary="Sweet software that helped us"/>
+
+
+    <Preference
+        app:title="Version"
+        app:summary="1.0.0"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

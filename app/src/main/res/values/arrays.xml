@@ -1,0 +1,14 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="data_entries">
+        <item>Alphabetical</item>
+        <item>Grade</item>
+        <item>Positive Cases</item>
+    </string-array>
+
+    <string-array name="data_values">
+        <item>Alphabetical</item>
+        <item>Grade</item>
+        <item>Positive Cases</item>
+    </string-array>
+</resources>

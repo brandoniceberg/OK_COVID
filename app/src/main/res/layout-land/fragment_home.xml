@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/positiveNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:text="7,000,000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/casesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Positive Cases"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@id/positiveNumberView"
+        app:layout_constraintEnd_toEndOf="@id/positiveNumberView"
+        app:layout_constraintTop_toBottomOf="@id/positiveNumberView"/>
+
+    <TextView
+        android:id="@+id/recoveredNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:text="8,000"
+        android:textColor="@color/recoveredGreen"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/casesTitle"/>
+
+    <TextView
+        android:id="@+id/recoveredTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Recovered"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/recoveredNumberView"
+        app:layout_constraintEnd_toEndOf="@id/recoveredNumberView"
+        app:layout_constraintTop_toBottomOf="@id/recoveredNumberView"/>
+
+    <TextView
+        android:id="@+id/deathNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="5,000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/casesTitle"
+        app:layout_constraintEnd_toEndOf="@id/casesTitle"
+        app:layout_constraintTop_toBottomOf="@id/casesTitle"/>
+
+    <TextView
+        android:id="@+id/deathTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Death"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/deathNumberView"
+        app:layout_constraintStart_toStartOf="@+id/deathNumberView"
+        app:layout_constraintTop_toBottomOf="@+id/deathNumberView" />
+
+    <TextView
+        android:id="@+id/negativeNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="center"
+        android:text="8,000"
+        android:textColor="@color/negativeRed"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/casesTitle" />
+
+    <TextView
+        android:id="@+id/negativeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Negative"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/negativeNumberView"
+        app:layout_constraintStart_toStartOf="@+id/negativeNumberView"
+        app:layout_constraintTop_toBottomOf="@+id/negativeNumberView" />
+
+    <TextView
+        android:id="@+id/hospitalizedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Hospitalized:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/recoveredTitle"
+        app:layout_constraintTop_toBottomOf="@id/recoveredTitle"/>
+
+    <TextView
+        android:id="@+id/hospitalizedNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="5,000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/negativeTitle"
+        app:layout_constraintTop_toBottomOf="@id/negativeTitle" />
+
+    <TextView
+        android:id="@+id/icuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="In the ICU:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/hospitalizedTitle"
+        app:layout_constraintTop_toBottomOf="@id/hospitalizedTitle" />
+
+    <TextView
+        android:id="@+id/icuNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="200"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/hospitalizedNumberView"
+        app:layout_constraintTop_toBottomOf="@id/hospitalizedNumberView" />
+
+    <TextView
+        android:id="@+id/topStatesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Top States:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/topstatesRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icuTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/seeallButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        app:strokeWidth="2dp"
+        android:text="See all"
+        app:layout_constraintBottom_toTopOf="@+id/topstatesRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icuNumberView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topstatesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/dateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topStatesTitle"
+        />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Last Modified:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalizedTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deathTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
